@@ -17,7 +17,7 @@ pnpm-licenses generate-disclaimer --prod --output-file=third-party-licenses.txt
 mkdir -p ${PREFIX}/bin
 tee ${PREFIX}/bin/storybook << EOF
 #!/bin/sh
-\${CONDA_PREFIX}/lib/node_modules/storybook/bin/index.cjs "\$@"
+exec \${CONDA_PREFIX}/lib/node_modules/storybook/bin/index.cjs "\$@"
 EOF
 chmod +x ${PREFIX}/bin/storybook
 
