@@ -17,12 +17,12 @@ pnpm-licenses generate-disclaimer --prod --output-file=third-party-licenses.txt
 mkdir -p ${PREFIX}/bin
 tee ${PREFIX}/bin/storybook << EOF
 #!/bin/sh
-exec \${CONDA_PREFIX}/lib/node_modules/storybook/bin/index.cjs "\$@"
+exec \${CONDA_PREFIX}/lib/node_modules/storybook/dist/bin/dispatcher.js "\$@"
 EOF
 chmod +x ${PREFIX}/bin/storybook
 
 tee ${PREFIX}/bin/storybook.cmd << EOF
-call %CONDA_PREFIX%\bin\node %CONDA_PREFIX%\lib\node_modules\storybook\bin\index.cjs %*
+call %CONDA_PREFIX%\bin\node %CONDA_PREFIX%\lib\node_modules\storybook\dist\bin\dispatcher.js %*
 EOF
 
 # Delete vendored esbuild so package is noarch
