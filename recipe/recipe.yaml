@@ -1,5 +1,5 @@
 context:
-  version: "10.1.6"
+  version: "10.1.8"
 
 package:
   name: storybook
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://registry.npmjs.org/storybook/-/storybook-${{ version }}.tgz
-  sha256: 308ff08b0c30b22b0c529aee0d9dfb1926b31cae883d743692bde4d0bf950c5c
+  sha256: 06705507becf3778724fdc3432ed8fb27ccfe5583acd9c48baf5ba217a6c37fb
 
 build:
   noarch: generic
