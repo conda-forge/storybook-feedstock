@@ -4,13 +4,7 @@
 
 name: Build conda package
 on:
-  push:
-
-  pull_request:
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.sha }}
-  cancel-in-progress: true
+  workflow_dispatch:
 
 jobs:
   build:
@@ -18,4 +12,4 @@ jobs:
     runs-on: ubuntu-slim
     if: false
     steps:
-    - run: echo Hello World
+    - run: exit 0
